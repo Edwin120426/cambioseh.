@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CambiosEH</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #0f172a; color: white; font-family: sans-serif; }
+        .card { background: #1e293b; border: 1px solid #334155; border-radius: 24px; }
+        input { background: #334155 !important; color: white !important; border: none !important; }
+    </style>
+</head>
+<body class="p-4 flex flex-col items-center">
+    <div class="w-full max-w-sm">
+        <header class="text-center my-6">
+            <h1 class="text-3xl font-black text-blue-400 italic">CAMBIOSEH</h1>
+            <p class="text-gray-400 text-sm">Transferencias inmediatas</p>
+        </header>
+
+        <div class="card p-6 mb-4">
+            <div class="flex justify-between items-center mb-6">
+                <span class="bg-green-500/20 text-green-400 text-xs font-bold px-3 py-1 rounded-full animate-pulse">● EN VIVO</span>
+                <span class="text-gray-400 text-xs" id="fecha"></span>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-300">Tasa COP a BS</span>
+                    <span class="text-2xl font-bold text-white" id="tasa-cop">3.85</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-gray-300">Tasa BCV (Dólar)</span>
+                    <span class="text-2xl font-bold text-white" id="tasa-bcv">45.50</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card p-6">
+            <h3 class="text-sm font-bold text-gray-400 mb-4 uppercase">Calculadora</h3>
+            <input type="number" id="envia" placeholder="Envías Pesos COP" class="w-full p-4 rounded-xl mb-4 text-lg">
+            <div class="text-center mb-4"><i class="fa-solid fa-repeat text-blue-500"></i></div>
+            <input type="number" id="recibe" placeholder="Recibes Bolívares" readonly class="w-full p-4 rounded-xl text-lg bg-slate-700">
+            
+            <a id="btn-wa" href="https://wa.me/TU_NUMERO" class="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-xl flex justify-center items-center gap-2">
+                <i class="fa-brands fa-whatsapp text-xl"></i> SOLICITAR CAMBIO
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // --- CAMBIA TUS TASAS AQUÍ DESDE EL MÓVIL ---
+        const tasaCOP = 3.82; 
+        const tasaBCV = 45.48;
+        const miWhatsapp = "573000000000"; // Pon tu número aquí
+        // -------------------------------------------
+
+        document.getElementById('tasa-cop').innerText = tasaCOP;
+        document.getElementById('tasa-bcv').innerText = tasaBCV;
+        document.getElementById('btn-wa').href = `https://wa.me/${miWhatsapp}?text=Hola, quiero cambiar. Tasa: ${tasaCOP}`;
+        document.getElementById('fecha').innerText = new Date().toLocaleDateString();
+
+        document.getElementById('envia').addEventListener('input', (e) => {
+            document.getElementById('recibe').value = (e.target.value / tasaCOP).toFixed(2);
+        });
+    </script>
+</body>
+</html>
