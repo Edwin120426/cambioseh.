@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | CambiosEH</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-900 text-white flex items-center justify-center min-h-screen p-6">
+
+    <div class="w-full max-w-md bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700">
+        <h2 class="text-3xl font-black text-blue-400 mb-2 italic text-center">CAMBIOSEH</h2>
+        <p class="text-slate-400 mb-8 text-center text-sm">Ingresa a tu cuenta para gestionar tus envíos.</p>
+
+        <form id="login-form" class="space-y-4">
+            <div>
+                <label class="block text-xs font-bold text-slate-500 mb-1 uppercase">Correo Electrónico</label>
+                <input type="email" id="email" required class="w-full p-4 bg-slate-700 rounded-xl border-none outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+                <label class="block text-xs font-bold text-slate-500 mb-1 uppercase">Contraseña</label>
+                <input type="password" id="password" required class="w-full p-4 bg-slate-700 rounded-xl border-none outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg">
+                ENTRAR
+            </button>
+        </form>
+        
+        <p class="mt-6 text-center text-sm text-slate-500">
+            ¿No tienes cuenta? <a href="registro.html" class="text-blue-400 font-bold">Regístrate aquí</a>
+        </p>
+    </div>
+
+    <script>
+        const SUPABASE_URL = "https://kcwvyaczwpoxrzg.supabase.co";
+        const SUPABASE_KEY = "Sb_publishable_u_S57SOOIf99DGrRJkratg_5W61-SMJ";
+        const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        document.getElementById('login-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+
+            if (error) {
+                alert("Error: " + error.message);
+            } else {
+                window.location.href = "tablero.html";
+            }
+        });
+    </script>
+</body>
+</html>
