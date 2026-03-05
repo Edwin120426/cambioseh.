@@ -7,65 +7,71 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #ffffff; font-family: sans-serif; margin: 0; padding: 0; }
-        .bg-dark { background-color: #1a1a1a; }
-        .text-naranja { color: #FF6B00; }
-        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+        body { background-color: #f4f7f6; font-family: sans-serif; margin: 0; }
+        .input-box { background: white; border: 2px solid #e2e8f0; border-radius: 15px; padding: 15px; }
+        .btn-enviar { background-color: #FF6B00; color: white; width: 100%; padding: 20px; border-radius: 15px; font-weight: bold; font-size: 1.2rem; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <div class="w-full py-6 flex justify-center border-b border-gray-100">
-        <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh" style="height: 80px; width: auto; max-width: 90%;">
+    <div style="background: white; padding: 40px 10px; text-align: center; border-bottom: 1px solid #ddd;">
+        <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh" style="max-height: 100px; width: auto; margin: 0 auto;">
     </div>
 
-    <div class="bg-gray-50 py-4 flex justify-around border-b border-gray-200">
-        <div class="text-center">
-            <p class="text-[10px] font-bold text-gray-400 uppercase">Tasa COP</p>
-            <p class="text-xl font-black text-black">3.82</p>
-        </div>
-        <div class="text-center border-l border-gray-200 pl-10">
-            <p class="text-[10px] font-bold text-gray-400 uppercase">Tasa BCV</p>
-            <p class="text-xl font-black text-black">45.48</p>
-        </div>
+    <div style="display: flex; gap: 10px; padding: 20px; max-width: 500px; margin: 0 auto;">
+        <a href="login.html" style="flex: 1; text-align: center; padding: 12px; border: 1px solid #ccc; border-radius: 10px; text-decoration: none; color: #333; font-weight: bold;">ENTRAR</a>
+        <a href="registro.html" style="flex: 1; text-align: center; padding: 12px; background: #000; color: #fff; border-radius: 10px; text-decoration: none; font-weight: bold;">REGISTRO</a>
     </div>
 
-    <div class="max-w-md mx-auto p-6">
-        <div class="bg-white rounded-3xl border-2 border-gray-100 p-6 shadow-xl">
-            <h2 class="text-center font-bold text-gray-800 mb-6 uppercase tracking-widest text-sm">Calculadora de Cambio</h2>
+    <div style="max-width: 500px; margin: 0 auto; padding: 20px;">
+        <div style="background: white; padding: 25px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
             
-            <div class="space-y-6">
-                <div>
-                    <label class="text-[10px] font-bold text-gray-400 mb-2 block uppercase">Envías Pesos Colombianos</label>
-                    <div class="flex items-center bg-gray-100 p-4 rounded-xl">
-                        <img src="https://flagcdn.com/w40/co.png" class="w-6 mr-3">
-                        <input type="number" id="cop" value="100000" class="bg-transparent text-2xl font-bold w-full outline-none">
-                        <span class="font-bold text-gray-400">COP</span>
-                    </div>
-                </div>
+            <h2 style="text-align: center; margin-bottom: 20px; font-size: 1.1rem; color: #666;">CALCULADORA DE ENVÍO</h2>
 
-                <div>
-                    <label class="text-[10px] font-bold text-gray-400 mb-2 block uppercase">Reciben Bolívares</label>
-                    <div class="flex items-center bg-orange-50 p-4 rounded-xl border border-orange-100">
-                        <img src="https://flagcdn.com/w40/ve.png" class="w-6 mr-3">
-                        <input type="number" id="bs" class="bg-transparent text-2xl font-bold w-full outline-none">
-                        <span class="font-bold text-gray-400">VES</span>
-                    </div>
+            <div style="display: flex; justify-content: space-around; margin-bottom: 25px; background: #f9f9f9; padding: 10px; border-radius: 10px;">
+                <div style="text-align: center;">
+                    <small style="color: #999;">TASA COP</small><br>
+                    <strong>3.82</strong>
                 </div>
-
-                <div class="bg-black text-white p-5 rounded-2xl text-center">
-                    <p class="text-[10px] font-bold text-orange-400 uppercase mb-1">Referencia Dólares BCV</p>
-                    <p class="text-3xl font-black">$ <span id="usd">0.00</span></p>
+                <div style="text-align: center;">
+                    <small style="color: #999;">TASA BCV</small><br>
+                    <strong>45.48</strong>
                 </div>
             </div>
 
-            <button onclick="window.location.href='registro.html'" class="w-full bg-[#FF6B00] text-white font-black py-5 rounded-2xl mt-8 text-lg uppercase shadow-lg shadow-orange-200">
-                REGISTRARME Y ENVIAR
-            </button>
+            <div class="input-box">
+                <label style="font-size: 0.7rem; font-weight: bold; color: #999;">ENVÍAS DESDE COLOMBIA</label>
+                <div style="display: flex; align-items: center; margin-top: 5px;">
+                    <img src="https://flagcdn.com/w40/co.png" style="width: 30px; margin-right: 10px;">
+                    <input type="number" id="cop" value="100000" style="width: 100%; border: none; font-size: 1.5rem; font-weight: bold; outline: none;">
+                    <span style="font-weight: bold; color: #ccc;">COP</span>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin: 10px 0; color: #FF6B00;">
+                <i class="fa-solid fa-arrow-down"></i>
+            </div>
+
+            <div class="input-box" style="border-color: #FF6B00;">
+                <label style="font-size: 0.7rem; font-weight: bold; color: #FF6B00;">RECIBEN EN VENEZUELA</label>
+                <div style="display: flex; align-items: center; margin-top: 5px;">
+                    <img src="https://flagcdn.com/w40/ve.png" style="width: 30px; margin-right: 10px;">
+                    <input type="number" id="bs" style="width: 100%; border: none; font-size: 1.5rem; font-weight: bold; outline: none;">
+                    <span style="font-weight: bold; color: #ccc;">VES</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 20px; text-align: center; background: #333; color: white; padding: 15px; border-radius: 15px;">
+                <small style="color: #aaa;">EQUIVALENTE EN DÓLARES BCV</small>
+                <div style="font-size: 1.8rem; font-weight: bold;">$ <span id="usd">0.00</span></div>
+            </div>
+
+            <button class="btn-enviar" onclick="window.location.href='registro.html'">ENVIAR DINERO AHORA</button>
+
         </div>
     </div>
 
-    <a href="https://wa.me/573203043142" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-4xl shadow-2xl z-50">
+    <a href="https://wa.me/573203043142" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000;">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -90,8 +96,6 @@
 
         c.addEventListener('input', (e) => calcular(e.target.value, 'c'));
         b.addEventListener('input', (e) => calcular(e.target.value, 'b'));
-        
-        // Iniciar con 100.000 COP
         calcular(100000, 'c');
     </script>
 </body>
