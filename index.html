@@ -3,148 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambioseh | Remesas Seguras a Venezuela 🇨🇴 🇻🇪</title>
+    <title>Cambioseh | Servicios Financieros Premium</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
-        .text-naranja { color: #FF6B00; }
-        .bg-naranja { background-color: #FF6B00; }
-        .bg-dark { background-color: #121212; }
-        .card-tasa { background: #ffffff; border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
-        /* Efecto hover suave para el botón de WhatsApp */
-        .whatsapp-btn:hover { transform: scale(1.1) rotate(5deg); }
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; }
+        .bg-navy { background-color: #0F172A; }
+        .text-emerald { color: #10B981; }
+        .border-gold { border-color: #B45309; }
+        .shadow-premium { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08); }
+        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
 </head>
 <body class="text-slate-900">
 
-    <nav class="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
-        <div class="max-w-6xl mx-auto px-6 h-24 flex justify-between items-center">
-            <a href="index.html" class="flex items-center">
-                <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh Logo" class="h-16 w-auto object-contain">
-            </a>
+    <nav class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="bg-white p-2 rounded-lg">
+                <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh" class="h-12 w-auto object-contain">
+            </div>
             
-            <div class="flex gap-4 items-center">
-                <a href="login.html" class="hidden md:block font-bold text-slate-600 hover:text-naranja transition-colors text-sm">Entrar</a>
-                <a href="registro.html" class="bg-dark text-white px-8 py-3 rounded-full font-extrabold text-sm hover:bg-naranja transition-all shadow-lg hover:shadow-naranja/20">REGISTRO</a>
+            <div class="flex gap-6 items-center">
+                <a href="login.html" class="text-sm font-bold text-slate-600 hover:text-navy">Iniciar Sesión</a>
+                <a href="registro.html" class="bg-navy text-white px-6 py-3 rounded-lg font-bold text-sm hover:bg-slate-800 transition-all shadow-md">CREAR CUENTA</a>
             </div>
         </div>
     </nav>
 
-    <header class="bg-dark text-white pt-16 pb-28 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <span class="inline-block bg-naranja text-white text-[10px] font-black px-4 py-1.5 rounded-full mb-6 uppercase tracking-[2px]">Tasa Garantizada Hoy</span>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-12 leading-tight tracking-tighter">Remesas <span class="text-naranja italic">Seguras y Rápidas</span></h1>
-            
-            <div class="grid grid-cols-2 gap-5 md:gap-10">
-                <div class="card-tasa p-8 rounded-[2.5rem] text-dark">
-                    <p class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3">Tasa COP a BS</p>
-                    <p class="text-4xl md:text-6xl font-black text-slate-900 tracking-tight">3.82</p>
-                </div>
-                <div class="card-tasa p-8 rounded-[2.5rem] text-dark">
-                    <p class="text-[11px] font-black text-slate-400 uppercase tracking-widest mb-3">Dólar BCV Ref.</p>
-                    <p class="text-4xl md:text-6xl font-black text-slate-900 tracking-tight">45.48</p>
-                </div>
+    <header class="bg-navy text-white pt-20 pb-40 px-6 overflow-hidden relative">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full mb-8">
+                <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                <span class="text-[10px] font-bold tracking-[2px] uppercase">Plataforma Verificada 2026</span>
             </div>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Transferencias Internacionales <br><span class="text-emerald-400">Sin Comisiones</span></h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto">La solución financiera más robusta para el envío de remesas entre Colombia y Venezuela.</p>
         </div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/10 rounded-full blur-[120px]"></div>
     </header>
 
-    <section class="max-w-6xl mx-auto -mt-16 px-6 relative z-10">
-        <div class="bg-white rounded-[3rem] shadow-premium p-10 md:p-16 border border-slate-100 shadow-2xl shadow-slate-200/50">
-            <h2 class="text-2xl font-bold text-slate-900 mb-10 tracking-tight flex items-center gap-3">
-                <i class="fa-solid fa-calculator text-naranja"></i> Calcula tu envío
-            </h2>
+    <section class="max-w-6xl mx-auto -mt-24 px-6 relative z-20">
+        <div class="grid lg:grid-cols-12 gap-8">
             
-            <div class="grid md:grid-cols-3 gap-8 items-center">
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100 focus-within:ring-2 focus-within:ring-naranja/20 transition-all">
-                    <label class="text-[11px] font-black text-slate-400 uppercase tracking-widest block mb-4">Tú envías Pesos</label>
-                    <div class="flex items-center gap-4">
-                        <img src="https://flagcdn.com/w80/co.png" srcset="https://flagcdn.com/w160/co.png 2x" alt="Colombia" class="w-10 h-7 rounded shadow-sm object-cover">
-                        <input type="number" id="cop" value="100000" class="bg-transparent text-3xl font-black w-full outline-none text-slate-900" placeholder="0">
-                        <span class="font-bold text-slate-400 text-lg">COP</span>
-                    </div>
-                </div>
-
-                <div class="flex justify-center -my-6 md:my-0 md:-mx-4 relative z-20">
-                    <div class="bg-white p-4 rounded-full shadow-lg border border-slate-100 text-naranja">
-                        <i class="fa-solid fa-arrow-right-arrow-left fa-rotate-90 md:fa-rotate-0 text-xl"></i>
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 p-8 rounded-[2rem] border border-slate-100">
-                    <label class="text-[11px] font-black text-slate-400 uppercase tracking-widest block mb-4">Ellos Reciben BS</label>
-                    <div class="flex items-center gap-4">
-                        <img src="https://flagcdn.com/w80/ve.png" srcset="https://flagcdn.com/w160/ve.png 2x" alt="Venezuela" class="w-10 h-7 rounded shadow-sm object-cover">
-                        <input type="number" id="bs" readonly class="bg-transparent text-3xl font-black w-full outline-none text-slate-900" placeholder="0">
-                        <span class="font-bold text-slate-400 text-lg">VES</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-10 p-6 bg-naranja/5 rounded-2xl border-2 border-naranja/10 text-center">
-                <p class="text-sm font-bold text-naranja">
-                    <i class="fa-solid fa-dollar-sign mr-1"></i> Equivalente de referencia en Dólares BCV: <span id="usd" class="font-black ml-1">2198.77</span> USD
-                </p>
-                <p class="text-[10px] text-naranja/60 mt-1">*(Esta cifra es solo una referencia basada en la tasa BCV oficial)</p>
-            </div>
-
-            <button onclick="window.location.href='registro.html'" class="w-full bg-dark hover:bg-naranja text-white font-black py-7 rounded-[2.5rem] mt-10 text-2xl transition-all shadow-xl hover:shadow-naranja/30 uppercase tracking-widest flex items-center justify-center gap-4 hover:-translate-y-1">
-                Comenzar Envío Seguro <i class="fa-solid fa-arrow-right-long text-lg"></i>
-            </button>
-        </div>
-    </section>
-
-    <section class="max-w-6xl mx-auto px-6 py-24">
-        <h3 class="text-center font-black text-3xl mb-16 tracking-tight">Voces de nuestra comunidad</h3>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-8 rounded-[3rem] bg-white border border-slate-100 shadow-xl shadow-slate-100/50">
-                <div class="flex gap-1 text-naranja text-[10px] mb-4">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p class="text-slate-600 italic font-medium leading-relaxed">"Desde que uso Cambioseh no me preocupo por las tasas. Siempre son los más competitivos y el dinero llega súper rápido a Banesco."</p>
-                <p class="mt-6 font-black text-slate-900">— Ricardo Mejías, Bogotá</p>
-            </div>
-            </div>
-    </section>
-
-    <a href="https://wa.me/573203043142" class="fixed bottom-10 right-10 bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center text-4xl shadow-2xl z-[100] transition-all whatsapp-btn hover:shadow-green-500/50">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <footer class="py-10 border-t border-slate-100 text-center bg-slate-50 mt-20">
-        <p class="text-slate-500 text-sm">© 2026 Cambioseh. Todos los derechos reservados. Seguridad garantizada.</p>
-    </footer>
-
-    <script>
-        // Configuración de tasas (Actualízalas aquí)
-        const T_COP = 3.82; 
-        const T_BCV = 45.48;
-
-        const c = document.getElementById('cop');
-        const b = document.getElementById('bs');
-        const u = document.getElementById('usd'); // Referencia USD BCV
-        
-        // Función de cálculo inteligente
-        function updateValues(source) {
-            let val;
-            if (source === 'cop') {
-                val = parseFloat(c.value) || 0;
-                b.value = (val * T_COP).toFixed(2);
-                u.innerText = (parseFloat(b.value) / T_BCV).toFixed(2);
-            } else if (source === 'bs') {
-                val = parseFloat(b.value) || 0;
-                c.value = (val / T_COP).toFixed(2);
-                u.innerText = (val / T_BCV).toFixed(2);
-            }
-        }
-
-        // Listeners para los inputs
-        c.addEventListener('input', () => updateValues('cop'));
-        b.addEventListener('input', () => updateValues('bs'));
-        
-        // Ejecutar cálculo inicial al cargar
-        updateValues('cop');
-    </script>
-</body>
-</html>
+            <div class="lg:col-span-4 space-y-4">
+                <div class="bg-white p-8 rounded-3xl shadow-premium border border-slate-100">
+                    <p class="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-6">Tasas de Cambio Oficiales</p>
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://flagcdn.com/w40/co.png" class="w-6 h-4 rounded-sm object-cover">
+                                <span class="text-sm font-bold text-slate-600">COP a VES</span>
+                            </div>
+                            <span class="text-2xl font-black text-slate-900">3.82</span>
+                        </div>
+                        <div class="h-px bg-slate-100 w-full"></div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <img src="https://flagcdn.com/w40/us.png" class="w-6 h-4 rounded-sm object-cover">
+                                <span class="text-sm font-bold text-slate-600">Dólar BCV</span>
+                            </div>
+                            <span class="text-2xl font-black text-slate-
+                                
