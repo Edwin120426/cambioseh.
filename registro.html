@@ -3,49 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro | CambiosEH</title>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <title>Registro | Cambioseh Premium</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dorado: #d4af37;
+            --azul-deep: #050b18;
+        }
+        body { 
+            background: radial-gradient(circle at top, #0a192f 0%, #050b18 100%);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: white;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .text-gold { color: var(--dorado); }
+        .bg-gold { background-color: var(--dorado); }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 35px;
+        }
+
+        .input-premium {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 18px;
+            padding: 1rem 1.2rem;
+            width: 100%;
+            outline: none;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        .input-premium:focus {
+            border-color: var(--dorado);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .label-gold {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--dorado);
+            margin-left: 10px;
+            margin-bottom: 8px;
+            display: block;
+            opacity: 0.8;
+        }
+    </style>
 </head>
-<body class="bg-slate-900 text-white flex items-center justify-center min-h-screen p-6">
+<body class="pb-10">
 
-    <div class="w-full max-w-md bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700">
-        <h2 class="text-3xl font-black text-blue-400 mb-2 italic text-center">CAMBIOSEH</h2>
-        <p class="text-slate-400 mb-8 text-center text-sm">Crea tu cuenta profesional de remesas.</p>
+    <header class="pt-8 pb-4 text-center">
+        <a href="index.html">
+            <img src="https://i.ibb.co/dwfhBg01/Ey-H-Cambios-Logo-20260127-121621-0000.png" 
+                 alt="Cambioseh" 
+                 class="h-16 w-auto mx-auto object-contain">
+        </a>
+    </header>
 
-        <form id="registro-form" class="space-y-4">
-            <div>
-                <label class="block text-xs font-bold text-slate-500 mb-1 uppercase">Correo Electrónico</label>
-                <input type="email" id="email" required class="w-full p-4 bg-slate-700 rounded-xl border-none outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
-            <div>
-                <label class="block text-xs font-bold text-slate-500 mb-1 uppercase">Contraseña</label>
-                <input type="password" id="password" required class="w-full p-4 bg-slate-700 rounded-xl border-none outline-none focus:ring-2 focus:ring-blue-500">
-            </div>
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 rounded-xl transition-all">
-                CREAR MI CUENTA
-            </button>
-        </form>
-    </div>
+    <main class="max-w-md mx-auto px-6">
+        
+        <div class="text-center mb-8">
+            <h1 class="text-2xl font-extrabold tracking-tight">Crea tu Cuenta <span class="text-gold italic">Premium</span></h1>
+            <p class="text-[9px] uppercase tracking-[4px] text-white/30 font-bold mt-2">Únete a la red más segura</p>
+        </div>
+
+        <div class="glass-card p-8 shadow-2xl">
+            <form id="registroForm" class="space-y-5">
+                
+                <div>
+                    <label class="label-gold">Nombre Completo</label>
+                    <input type="text" placeholder="Ej. Juan Pérez" class="input-premium">
+                </div>
+
+                <div>
+                    <label class="label-gold">Correo Electrónico</label>
+                    <input type="email" placeholder="tu@correo.com" class="input-premium">
+                </div>
+
+                <div>
+                    <label class="label-gold">WhatsApp / Teléfono</label>
+                    <input type="tel" placeholder="+57 300..." class="input-premium">
+                </div>
+
+                <div>
+                    <label class="label-gold">Contraseña</label>
+                    <div class="relative">
+                        <input type="password" id="pass" placeholder="••••••••" class="input-premium">
+                        <button type="button" onclick="togglePass()" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/30 hover:text-gold">
+                            <i id="eyeIcon" class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 px-2 py-2">
+                    <input type="checkbox" id="terms" class="accent-[#d4af37] w-4 h-4">
+                    <label for="terms" class="text-[10px] text-white/40 leading-tight">Acepto los términos de seguridad y políticas de privacidad de Cambioseh.</label>
+                </div>
+
+                <button type="submit" class="w-full bg-gold text-[#050b18] py-5 rounded-2xl mt-4 font-black text-lg shadow-[0_15px_35px_rgba(212,175,55,0.25)] transition-all active:scale-95 uppercase tracking-widest">
+                    Finalizar Registro
+                </button>
+            </form>
+        </div>
+
+        <p class="text-center mt-8 text-xs text-white/40">
+            ¿Ya tienes una cuenta? <a href="login.html" class="text-gold font-bold ml-1">Inicia Sesión</a>
+        </p>
+
+        <p class="text-center mt-12 text-[8px] text-white/10 uppercase tracking-[6px] font-bold">Cambioseh Luxury Financial © 2026</p>
+    </main>
 
     <script>
-        const SUPABASE_URL = "https://kcwvyaczwpoxrzg.supabase.co";
-        const SUPABASE_KEY = "Sb_publishable_u_S57SOOIf99DGrRJkratg_5W61-SMJ";
-        const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
-        document.getElementById('registro-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            const { data, error } = await supabaseClient.auth.signUp({ email, password });
-
-            if (error) {
-                alert("Error: " + error.message);
+        // Función para ver/ocultar contraseña
+        function togglePass() {
+            const passInput = document.getElementById('pass');
+            const eyeIcon = document.getElementById('eyeIcon');
+            if (passInput.type === 'password') {
+                passInput.type = 'text';
+                eyeIcon.classList.replace('fa-eye', 'fa-eye-slash');
             } else {
-                alert("¡Cuenta creada! Ahora puedes ir al Dashboard.");
-                window.location.href = "dashboard.html";
+                passInput.type = 'password';
+                eyeIcon.classList.replace('fa-eye-slash', 'fa-eye');
             }
+        }
+
+        // Simulación de envío
+        document.getElementById('registroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Registro exitoso! Bienvenido a la experiencia Premium de Cambioseh.');
+            window.location.href = 'index.html';
         });
     </script>
 </body>
