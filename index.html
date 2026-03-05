@@ -3,133 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambioseh | Transferencias Seguras</title>
+    <title>Cambioseh | Finanzas Seguras</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #fcfcfc; }
-        .fintech-blue { color: #003366; }
-        .bg-fintech { background-color: #003366; }
-        .card-shadow { box-shadow: 0 10px 40px rgba(0,0,0,0.04); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F1F5F9; }
+        .bg-banco { background-color: #0A192F; } /* Azul Marino Profundo */
+        .text-banco { color: #0A192F; }
+        .card-shadow { box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .input-focus:focus-within { border-color: #0A192F; ring: 2px; ring-color: #0A192F; }
     </style>
 </head>
 <body class="text-slate-900">
 
-    <header class="bg-white px-6 py-8 text-center border-b border-slate-100">
-        <div class="max-w-4xl mx-auto flex flex-col items-center">
-            <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh" class="h-20 w-auto mb-6 object-contain">
-            
-            <div class="flex gap-3">
-                <a href="login.html" class="text-xs font-bold text-slate-500 uppercase tracking-widest pt-3">Entrar</a>
-                <a href="registro.html" class="bg-fintech text-white px-8 py-3 rounded-full font-black text-xs uppercase tracking-tighter shadow-lg shadow-blue-900/20">Registrarme</a>
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-md mx-auto px-4 h-20 flex justify-between items-center">
+            <div class="flex-shrink-0">
+                <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh" class="h-14 w-auto object-contain">
+            </div>
+            <div class="flex gap-4">
+                <a href="login.html" class="text-xs font-bold text-slate-500 pt-2.5">ENTRAR</a>
+                <a href="registro.html" class="bg-banco text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-lg">REGISTRO</a>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="max-w-lg mx-auto px-5 py-8">
+    <main class="max-w-md mx-auto px-4 py-6">
         
-        <div class="bg-white rounded-3xl p-6 card-shadow border border-slate-50 mb-6">
-            <h2 class="text-[10px] font-black text-slate-400 uppercase tracking-[2px] mb-5 text-center">Tasas de Cambio Oficiales</h2>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="text-center p-4 bg-slate-50 rounded-2xl">
-                    <div class="flex items-center justify-center gap-2 mb-1">
-                        <img src="https://flagcdn.com/w40/co.png" class="w-4 h-3 rounded-sm">
-                        <span class="text-[10px] font-bold text-slate-500">COP/VES</span>
-                    </div>
-                    <p class="text-2xl font-black fintech-blue">3.82</p>
-                </div>
-                <div class="text-center p-4 bg-slate-50 rounded-2xl">
-                    <div class="flex items-center justify-center gap-2 mb-1">
-                        <img src="https://flagcdn.com/w40/us.png" class="w-4 h-3 rounded-sm">
-                        <span class="text-[10px] font-bold text-slate-500">BCV REF.</span>
-                    </div>
-                    <p class="text-2xl font-black fintech-blue">45.48</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-[2.5rem] p-8 card-shadow border border-slate-50">
-            <h3 class="text-lg font-extrabold mb-8 text-center">Calculadora de Envío</h3>
-            
-            <div class="space-y-4">
-                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
-                    <label class="text-[10px] font-black text-slate-400 uppercase block mb-2">Tú envías Pesos</label>
-                    <div class="flex items-center justify-between">
-                        <input type="number" id="cop" value="100000" class="bg-transparent text-3xl font-black w-full outline-none text-slate-800">
-                        <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-xl shadow-sm border border-slate-100">
-                            <img src="https://flagcdn.com/w40/co.png" class="w-5 h-4 object-cover rounded-sm">
-                            <span class="text-xs font-bold">COP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
-                    <label class="text-[10px] font-black text-slate-400 uppercase block mb-2">Ellos Reciben Bolívares</label>
-                    <div class="flex items-center justify-between">
-                        <input type="number" id="bs" class="bg-transparent text-3xl font-black w-full outline-none text-slate-800">
-                        <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-xl shadow-sm border border-slate-100">
-                            <img src="https://flagcdn.com/w40/ve.png" class="w-5 h-4 object-cover rounded-sm">
-                            <span class="text-xs font-bold">VES</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-blue-50 p-5 rounded-2xl border-2 border-blue-100">
-                    <label class="text-[10px] font-black text-blue-500 uppercase block mb-2 tracking-widest">Referencia Dólar BCV</label>
-                    <div class="flex items-center justify-between">
-                        <input type="number" id="usd" readonly class="bg-transparent text-3xl font-black w-full outline-none text-blue-900">
-                        <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-xl shadow-sm border border-blue-200">
-                            <img src="https://flagcdn.com/w40/us.png" class="w-5 h-4 object-cover rounded-sm">
-                            <span class="text-xs font-bold">USD</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button onclick="window.location.href='registro.html'" class="w-full bg-fintech text-white font-black py-6 rounded-3xl mt-8 text-lg transition-all active:scale-95 shadow-xl shadow-blue-900/20 uppercase">
-                Iniciar Transferencia
-            </button>
-        </div>
         
-        <div class="mt-12 text-center space-y-6">
-            <h4 class="text-sm font-black text-slate-400 uppercase tracking-[3px]">¿Por qué elegir Cambioseh?</h4>
-            <div class="flex flex-col gap-4">
-                <div class="flex items-center gap-4 bg-white p-4 rounded-2xl card-shadow text-left">
-                    <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-green-600 text-xl">
-                        <i class="fa-solid fa-shield-check"></i>
-                    </div>
-                    <div>
-                        <p class="text-sm font-bold">Transacciones Blindadas</p>
-                        <p class="text-xs text-slate-400 font-medium">Seguridad de nivel bancario en cada envío.</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-4 bg-white p-4 rounded-2xl card-shadow text-left">
-                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 text-xl">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <div>
-                        <p class="text-sm font-bold">Abono en Minutos</p>
-                        <p class="text-xs text-slate-400 font-medium">Pagos inmediatos a todos los bancos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <a href="https://wa.me/573203043142" class="fixed bottom-8 right-8 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl z-[100]">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
-    <script>
-        const T_COP = 3.82, T_BCV = 45.48;
-        const c = document.getElementById('cop'), b = document.getElementById('bs'), u = document.getElementById('usd');
-        
-        function update(val, from) {
-            if(from === 'c') {
-                const resBs = val * T_COP;
-                b.value = resBs.toFixed(0);
-                u.value = (resBs / T_BCV).toFixed(2);
-            } else if(from === 'b') {
-                c.value =
-                    
