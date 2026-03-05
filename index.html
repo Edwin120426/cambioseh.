@@ -3,118 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambioseh | Remesas Seguras</title>
+    <title>Cambioseh | Remesas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #fcfcfc; font-family: 'Plus Jakarta Sans', sans-serif; }
-        .bg-navy { background-color: #0f172a; }
+        body { background-color: #f0f2f5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .bg-navy { background-color: #0b1221; }
         .text-naranja { color: #FF6B00; }
-        .bg-naranja { background-color: #FF6B00; }
-        .card-premium { background: white; border-radius: 32px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); border: 1px solid #f1f5f9; }
+        .btn-naranja { background-color: #FF6B00; color: white; }
+        .sombra-pro { box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
         input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
 </head>
-<body class="text-slate-900">
+<body class="pb-10">
 
-    <nav class="bg-white border-b border-slate-100 sticky top-0 z-50 py-4">
-        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="https://i.ibb.co/FLhP6VbN/logo.png" 
-                     alt="Cambioseh" 
-                     class="h-14 w-auto object-contain"
-                     style="min-width: 150px;">
-            </div>
-            
-            <div class="flex gap-4">
-                <a href="login.html" class="hidden md:block font-bold text-slate-500 pt-2 text-sm">Entrar</a>
-                <a href="registro.html" class="bg-navy text-white px-6 py-2.5 rounded-full font-extrabold text-xs uppercase tracking-wider shadow-lg">REGISTRO</a>
-            </div>
+    <div class="bg-white py-6 border-b border-slate-200">
+        <div class="max-w-md mx-auto px-4 flex justify-center">
+            <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh" class="h-20 w-auto object-contain">
         </div>
-    </nav>
+    </div>
 
-    <header class="bg-navy text-white pt-16 pb-24 px-6 text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Envía dinero a <span class="text-naranja">Venezuela</span></h1>
-            <p class="text-slate-400 font-medium italic uppercase text-[10px] tracking-[4px]">Seguridad · Rapidez · Confianza</p>
-        </div>
-    </header>
+    <div class="max-w-md mx-auto px-4 mt-6 flex gap-2">
+        <a href="login.html" class="flex-1 bg-white text-slate-700 py-3 rounded-xl font-bold text-center border border-slate-200 shadow-sm text-sm">ENTRAR</a>
+        <a href="registro.html" class="flex-1 bg-navy text-white py-3 rounded-xl font-bold text-center shadow-md text-sm uppercase tracking-wider">REGISTRO</a>
+    </div>
 
-    <main class="max-w-lg mx-auto px-5 -mt-16">
-        <div class="card-premium p-8 md:p-10">
+    <main class="max-w-md mx-auto px-4 mt-8">
+        <div class="bg-white rounded-[2rem] p-8 sombra-pro">
             
+            <h2 class="text-center font-black text-slate-800 uppercase tracking-tighter text-xl mb-6 italic">Calculadora de Cambio</h2>
+
+            <div class="flex justify-between mb-8 px-2">
+                <div class="text-center">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase">Tasa COP</p>
+                    <p class="text-xl font-black text-navy">3.82</p>
+                </div>
+                <div class="w-[1px] bg-slate-100"></div>
+                <div class="text-center">
+                    <p class="text-[9px] font-bold text-slate-400 uppercase">Dólar BCV</p>
+                    <p class="text-xl font-black text-navy">45.48</p>
+                </div>
+            </div>
+
             <div class="space-y-6">
                 <div>
-                    <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2 mb-2 block">Tú envías Pesos</label>
-                    <div class="flex items-center bg-slate-50 p-5 rounded-2xl border border-slate-100">
-                        <img src="https://flagcdn.com/w80/co.png" class="w-8 h-6 rounded shadow-sm mr-4">
-                        <input type="number" id="cop" value="100000" class="bg-transparent text-3xl font-black w-full outline-none">
-                        <span class="font-bold text-slate-300">COP</span>
+                    <div class="flex items-center gap-2 mb-2 ml-2">
+                        <img src="https://flagcdn.com/w40/co.png" class="w-5 h-3 shadow-sm rounded-sm">
+                        <label class="text-[10px] font-black text-slate-400 uppercase">Envías Pesos</label>
+                    </div>
+                    <div class="bg-slate-50 p-5 rounded-2xl border-2 border-slate-100 focus-within:border-orange-500 transition-all">
+                        <input type="number" id="cop" value="100000" class="bg-transparent text-3xl font-black w-full outline-none text-slate-800">
                     </div>
                 </div>
 
                 <div>
-                    <label class="text-[10px] font-black text-slate-400 uppercase tracking-widest ml-2 mb-2 block">Reciben Bolívares</label>
-                    <div class="flex items-center bg-slate-50 p-5 rounded-2xl border border-slate-100">
-                        <img src="https://flagcdn.com/w80/ve.png" class="w-8 h-6 rounded shadow-sm mr-4">
-                        <input type="number" id="bs" class="bg-transparent text-3xl font-black w-full outline-none">
-                        <span class="font-bold text-slate-300">VES</span>
+                    <div class="flex items-center gap-2 mb-2 ml-2">
+                        <img src="https://flagcdn.com/w40/ve.png" class="w-5 h-3 shadow-sm rounded-sm">
+                        <label class="text-[10px] font-black text-slate-400 uppercase text-naranja">Reciben Bolívares</label>
+                    </div>
+                    <div class="bg-orange-50 p-5 rounded-2xl border-2 border-orange-100 focus-within:border-orange-500 transition-all">
+                        <input type="number" id="bs" class="bg-transparent text-3xl font-black w-full outline-none text-slate-800">
                     </div>
                 </div>
 
-                <div class="bg-naranja/5 p-6 rounded-3xl border border-naranja/10">
-                    <p class="text-[9px] font-black text-naranja uppercase text-center tracking-[2px] mb-2">Equivalente en Dólares BCV</p>
-                    <div class="text-center">
-                        <span class="text-4xl font-black text-navy tracking-tighter italic">$<span id="usd">0.00</span></span>
-                    </div>
+                <div class="pt-4 border-t border-slate-50 text-center">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Equivalente Dólar BCV</p>
+                    <p class="text-3xl font-black text-navy">$ <span id="usd">0.00</span></p>
                 </div>
             </div>
 
-            <div class="mt-8 flex justify-between text-[10px] font-bold text-slate-500 bg-slate-50 p-4 rounded-xl">
-                <span>TASA COP: <span class="text-navy font-black">3.82</span></span>
-                <span class="text-slate-200">|</span>
-                <span>TASA BCV: <span class="text-navy font-black">45.48</span></span>
-            </div>
-
-            <button onclick="window.location.href='registro.html'" class="w-full bg-navy hover:bg-naranja text-white font-black py-6 rounded-2xl mt-8 text-xl shadow-xl transition-all uppercase tracking-widest active:scale-95">
+            <button onclick="window.location.href='registro.html'" class="w-full btn-naranja py-6 rounded-2xl mt-8 font-black text-lg shadow-lg shadow-orange-200 uppercase tracking-widest active:scale-95 transition-all">
                 ENVIAR DINERO AHORA
             </button>
         </div>
 
-        <div class="mt-12 text-center px-4">
-            <h3 class="text-lg font-bold text-slate-800 italic">"La mejor decisión para mi familia"</h3>
-            <p class="text-sm text-slate-500 mt-2">Únete a los más de 5,000 clientes que confían en Cambioseh todos los meses.</p>
+        <div class="mt-10 bg-navy text-white p-8 rounded-[2rem] text-center">
+            <h3 class="font-bold text-lg mb-2 text-naranja">¿Por qué Cambioseh?</h3>
+            <p class="text-xs text-slate-400 leading-relaxed italic">"Somos la casa de cambio más segura para tu familia. Transparencia total, sin comisiones ocultas y abono en tiempo récord."</p>
         </div>
     </main>
 
-    <a href="https://wa.me/573203043142" class="fixed bottom-8 right-8 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-4xl shadow-2xl z-50">
+    <a href="https://wa.me/573203043142" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
-
-    <footer class="py-12 text-center text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-        © 2026 Cambioseh Financial | Seguridad Garantizada
-    </footer>
 
     <script>
         const T_COP = 3.82, T_BCV = 45.48;
         const c = document.getElementById('cop'), b = document.getElementById('bs'), u = document.getElementById('usd');
         
-        function calc(val, type) {
-            let num = parseFloat(val) || 0;
+        function update(val, type) {
+            let n = parseFloat(val) || 0;
             if(type === 'c') {
-                let resBs = num * T_COP;
+                let resBs = n * T_COP;
                 b.value = resBs.toFixed(0);
                 u.innerText = (resBs / T_BCV).toFixed(2);
             } else {
-                let resCop = num / T_COP;
-                c.value = resCop.toFixed(0);
-                u.innerText = (num / T_BCV).toFixed(2);
+                c.value = (n / T_COP).toFixed(0);
+                u.innerText = (n / T_BCV).toFixed(2);
             }
         }
-        c.addEventListener('input', (e) => calc(e.target.value, 'c'));
-        b.addEventListener('input', (e) => calc(e.target.value, 'b'));
-        calc(100000, 'c');
+        c.addEventListener('input', (e) => update(e.target.value, 'c'));
+        b.addEventListener('input', (e) => update(e.target.value, 'b'));
+        update(100000, 'c');
     </script>
 </body>
 </html>
