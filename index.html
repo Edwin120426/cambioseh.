@@ -7,99 +7,98 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Estilo para que el logo no se deforme en móviles */
-        .contenedor-logo {
-            background-color: white;
-            padding: 30px 10px;
+        body { background-color: #fcfcfc; font-family: sans-serif; }
+        /* Ajuste definitivo para el logo */
+        .header-logo {
+            padding: 25px 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            border-bottom: 2px solid #f1f5f9;
+            background: white;
         }
         .logo-img {
-            width: 80%; /* Ocupa casi todo el ancho para que se vea grande */
-            max-width: 300px;
+            width: 180px; /* Tamaño exacto para que no se pixele */
             height: auto;
             object-fit: contain;
         }
+        .card-app {
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #f1f5f9;
+        }
         input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
+            -webkit-appearance: none; margin: 0;
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body>
 
-    <div class="contenedor-logo">
+    <header class="header-logo">
         <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh" class="logo-img">
+    </header>
+
+    <div class="flex gap-3 p-5 max-w-md mx-auto">
+        <a href="login.html" class="flex-1 text-center py-3.5 bg-white border border-gray-200 rounded-2xl font-bold text-gray-500 text-sm">Entrar</a>
+        <a href="registro.html" class="flex-1 text-center py-3.5 bg-black text-white rounded-2xl font-bold text-sm shadow-lg">Registro</a>
     </div>
 
-    <div class="flex gap-2 p-4 max-w-md mx-auto">
-        <a href="login.html" class="flex-1 text-center py-3 bg-white border border-gray-200 rounded-xl font-bold text-gray-600 text-sm shadow-sm">Entrar</a>
-        <a href="registro.html" class="flex-1 text-center py-3 bg-black text-white rounded-xl font-bold text-sm shadow-md">Registro</a>
-    </div>
+    <main class="max-w-md mx-auto px-5">
+        <div class="card-app p-6">
+            <h2 class="text-center text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-6">Calculadora de Cambio</h2>
 
-    <div class="max-w-md mx-auto px-4 mt-4">
-        <div class="bg-white rounded-[2rem] p-6 shadow-xl border border-gray-100">
-            
-            <h2 class="text-center font-bold text-gray-400 uppercase text-xs tracking-widest mb-6">Calculadora de Envío</h2>
-
-            <div class="flex justify-between bg-gray-50 rounded-2xl p-4 mb-6">
-                <div class="text-center">
-                    <p class="text-[10px] font-bold text-gray-400">TASA COP</p>
-                    <p class="text-lg font-black">3.82</p>
+            <div class="grid grid-cols-2 gap-3 mb-8">
+                <div class="bg-gray-50 p-4 rounded-2xl text-center border border-gray-100">
+                    <p class="text-[9px] font-bold text-gray-400">TASA COP</p>
+                    <p class="text-xl font-black text-slate-800">3.82</p>
                 </div>
-                <div class="text-center border-l border-gray-200 pl-8">
-                    <p class="text-[10px] font-bold text-gray-400">DÓLAR BCV</p>
-                    <p class="text-lg font-black">45.48</p>
+                <div class="bg-gray-50 p-4 rounded-2xl text-center border border-gray-100">
+                    <p class="text-[9px] font-bold text-gray-400">DÓLAR BCV</p>
+                    <p class="text-xl font-black text-slate-800">45.48</p>
                 </div>
             </div>
 
-            <div class="mb-4">
-                <div class="flex items-center gap-2 mb-2 ml-2">
-                    <img src="https://flagcdn.com/w40/co.png" class="w-5 h-3 rounded-sm">
-                    <span class="text-[10px] font-bold text-gray-500 uppercase">Tú envías Pesos</span>
-                </div>
-                <div class="bg-gray-50 p-4 rounded-2xl flex justify-between items-center border border-gray-100">
-                    <input type="number" id="cop" value="100000" class="bg-transparent text-2xl font-black w-full outline-none">
-                    <span class="font-bold text-gray-400">COP</span>
+            <div class="mb-5">
+                <label class="text-[10px] font-bold text-gray-400 ml-2 mb-2 block uppercase">Tú envías Pesos</label>
+                <div class="flex items-center bg-gray-50 p-5 rounded-2xl border border-gray-100">
+                    <img src="https://flagcdn.com/w40/co.png" class="w-6 h-4 rounded-sm mr-3">
+                    <input type="number" id="cop" value="100000" class="bg-transparent text-2xl font-bold w-full outline-none text-slate-800">
+                    <span class="font-bold text-slate-300">COP</span>
                 </div>
             </div>
 
-            <div class="flex justify-center my-2 text-orange-500">
-                <i class="fa-solid fa-circle-down text-2xl"></i>
+            <div class="flex justify-center my-2">
+                <i class="fa-solid fa-chevron-down text-gray-200"></i>
             </div>
 
-            <div class="mb-6">
-                <div class="flex items-center gap-2 mb-2 ml-2">
-                    <img src="https://flagcdn.com/w40/ve.png" class="w-5 h-3 rounded-sm">
-                    <span class="text-[10px] font-bold text-orange-500 uppercase">Ellos reciben Bolívares</span>
-                </div>
-                <div class="bg-orange-50 p-4 rounded-2xl flex justify-between items-center border border-orange-200">
-                    <input type="number" id="bs" class="bg-transparent text-2xl font-black w-full outline-none text-orange-700">
-                    <span class="font-bold text-orange-400">VES</span>
+            <div class="mb-8">
+                <label class="text-[10px] font-bold text-orange-500 ml-2 mb-2 block uppercase">Reciben Bolívares</label>
+                <div class="flex items-center bg-orange-50 p-5 rounded-2xl border border-orange-100">
+                    <img src="https://flagcdn.com/w40/ve.png" class="w-6 h-4 rounded-sm mr-3">
+                    <input type="number" id="bs" class="bg-transparent text-2xl font-bold w-full outline-none text-orange-700">
+                    <span class="font-bold text-orange-300">VES</span>
                 </div>
             </div>
 
-            <div class="bg-slate-900 rounded-2xl p-5 text-center mb-6">
-                <p class="text-[10px] font-bold text-gray-400 uppercase mb-1">Equivalente Dólar BCV</p>
+            <div class="bg-slate-900 rounded-3xl p-6 text-center mb-8">
+                <p class="text-[9px] font-bold text-gray-500 uppercase tracking-widest mb-1">Equivalente Dólar BCV</p>
                 <p class="text-3xl font-black text-white">$ <span id="usd">0.00</span></p>
             </div>
 
-            <button onclick="window.location.href='registro.html'" class="w-full bg-[#FF6B00] text-white font-black py-5 rounded-2xl text-lg shadow-lg shadow-orange-200 uppercase tracking-widest active:scale-95 transition-all">
-                Enviar dinero ahora
+            <button onclick="window.location.href='registro.html'" class="w-full bg-[#FF6B00] text-white font-black py-5 rounded-2xl text-lg uppercase tracking-widest shadow-xl shadow-orange-100">
+                Enviar ahora
             </button>
         </div>
-    </div>
 
-    <a href="https://wa.me/573203043142" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50">
+        <p class="text-center text-[10px] text-gray-400 mt-10 font-bold uppercase tracking-widest">© 2026 Cambioseh Financial</p>
+    </main>
+
+    <a href="https://wa.me/573203043142" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <script>
         const T_COP = 3.82, T_BCV = 45.48;
         const c = document.getElementById('cop'), b = document.getElementById('bs'), u = document.getElementById('usd');
-        
         function update(val, type) {
             let n = parseFloat(val) || 0;
             if(type === 'c') {
