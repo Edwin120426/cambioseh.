@@ -3,124 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambioseh | Envía dinero a Venezuela</title>
+    <title>Cambioseh | Tu Remesa Segura</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; }
-        .fintech-card { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #ffffff; }
+        .text-naranja { color: #FF6B00; }
+        .bg-naranja { background-color: #FF6B00; }
+        .bg-dark { background-color: #121212; }
+        .shadow-premium { box-shadow: 0 20px 50px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body class="text-slate-900">
 
-    <nav class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-slate-100">
-        <div class="max-w-5xl mx-auto px-5 h-16 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-blue-200">
-                    <i class="fa-solid fa-paper-plane text-white text-xs"></i>
-                </div>
-                <span class="text-xl font-extrabold tracking-tight text-slate-800">CAMBIOSEH</span>
-            </div>
-            <div class="flex items-center gap-3">
-                <a href="login.html" class="text-sm font-semibold text-slate-600 hover:text-blue-600 transition">Entrar</a>
-                <a href="registro.html" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-bold shadow-md shadow-blue-100 hover:bg-blue-700 transition">Registro</a>
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex justify-between items-center">
+            <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh" class="h-10">
+            <div class="flex gap-4 items-center">
+                <a href="login.html" class="font-bold text-sm text-slate-600">Iniciar Sesión</a>
+                <a href="registro.html" class="bg-dark text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-naranja transition-all shadow-lg">Registrarme</a>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto px-5 py-10 flex flex-col lg:flex-row items-center gap-12">
-        
-        <div class="w-full lg:w-1/2 text-center lg:text-left">
-            <span class="bg-blue-50 text-blue-600 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Seguro y sin comisiones</span>
-            <h1 class="text-4xl lg:text-5xl font-extrabold text-slate-900 mt-4 leading-tight">
-                La forma más rápida de enviar dinero a <span class="text-blue-600 italic">Venezuela</span>
-            </h1>
-            <p class="text-slate-500 mt-6 text-lg leading-relaxed">
-                Únete a los miles de venezolanos que confían en nosotros para sus remesas diarias. Tasa garantizada y abono inmediato.
-            </p>
-            <div class="flex flex-wrap justify-center lg:justify-start gap-6 mt-8">
-                <div class="flex items-center gap-2 text-sm font-semibold text-slate-700">
-                    <i class="fa-solid fa-circle-check text-green-500"></i> Abono en 5 min
+    <header class="bg-dark text-white pt-16 pb-32 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block bg-white/10 text-white text-[10px] font-black px-4 py-1 rounded-full mb-6 uppercase tracking-[3px]">Tasa Garantizada 2026</span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Envía dinero con la <span class="text-naranja italic">mejor tasa</span> del mercado</h1>
+            <p class="text-slate-400 text-lg max-w-2xl mx-auto font-medium">Cambioseh: Seguridad, rapidez y transparencia en cada remesa hacia Venezuela.</p>
+        </div>
+    </header>
+
+    <section class="max-w-5xl mx-auto -mt-20 px-6">
+        <div class="bg-white rounded-[3rem] shadow-premium p-10 border border-slate-50">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="space-y-3">
+                    <label class="text-[11px] font-black text-slate-400 uppercase tracking-widest">Tú envías Pesos</label>
+                    <div class="relative">
+                        <input type="number" id="cop" class="w-full text-2xl font-bold p-6 bg-slate-50 rounded-[2rem] border-none outline-none focus:ring-2 focus:ring-naranja/20 transition-all">
+                        <span class="absolute right-6 top-1/2 -translate-y-1/2 font-black text-slate-400">COP</span>
+                    </div>
                 </div>
-                <div class="flex items-center gap-2 text-sm font-semibold text-slate-700">
-                    <i class="fa-solid fa-circle-check text-green-500"></i> Pagos Banesco y BDV
+                <div class="space-y-3">
+                    <label class="text-[11px] font-black text-slate-400 uppercase tracking-widest">Reciben Bolívares</label>
+                    <div class="relative border-x border-slate-100 px-2">
+                        <input type="number" id="bs" class="w-full text-2xl font-bold p-6 bg-slate-50 rounded-[2rem] border-none outline-none focus:ring-2 focus:ring-naranja/20 transition-all">
+                        <span class="absolute right-6 top-1/2 -translate-y-1/2 font-black text-slate-400">VES</span>
+                    </div>
+                </div>
+                <div class="space-y-3">
+                    <label class="text-[11px] font-black text-slate-400 uppercase tracking-widest text-naranja">Ref. Dólares BCV</label>
+                    <div class="relative">
+                        <input type="number" id="usd" class="w-full text-2xl font-bold p-6 bg-naranja/5 text-naranja rounded-[2rem] border-2 border-naranja/10 outline-none">
+                        <span class="absolute right-6 top-1/2 -translate-y-1/2 font-black text-naranja/40">USD</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center bg-slate-50 px-8 py-4 rounded-2xl mb-8">
+                <div class="text-xs font-bold text-slate-500 uppercase tracking-tighter">
+                    Tasa COP: <span class="text-slate-900 ml-1">3.82</span> 
+                    <span class="mx-3 text-slate-200">|</span> 
+                    Tasa BCV: <span class="text-slate-900 ml-1">45.48</span>
+                </div>
+                <div class="flex items-center gap-2 text-[10px] font-black text-green-600">
+                    <i class="fa-solid fa-bolt"></i> ABONO INMEDIATO
+                </div>
+            </div>
+
+            <button onclick="window.location.href='registro.html'" class="w-full bg-dark hover:bg-naranja text-white font-black py-6 rounded-[2rem] text-xl shadow-2xl transition-all uppercase tracking-widest flex items-center justify-center gap-4">
+                Comenzar envío ahora <i class="fa-solid fa-arrow-right-long text-sm"></i>
+            </button>
+        </div>
+    </section>
+
+    <section class="max-w-6xl mx-auto px-6 py-32">
+        <div class="flex flex-col md:flex-row items-center gap-20 mb-32">
+            <div class="w-full md:w-1/2 relative">
+                <div class="absolute -top-10 -left-10 w-40 h-40 bg-naranja/10 rounded-full blur-3xl"></div>
+                <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=1000" class="rounded-[4rem] shadow-2xl relative z-10" alt="Familia Cambioseh">
+            </div>
+            <div class="w-full md:w-1/2 space-y-8">
+                <h2 class="text-5xl font-extrabold leading-tight text-slate-900">Tu familia merece <span class="text-naranja">lo mejor</span></h2>
+                <p class="text-slate-500 text-lg font-medium leading-relaxed">No somos solo una plataforma, somos el puente que te une con los tuyos. Diseñamos Cambioseh para ser la casa de cambio más honesta y rápida del mercado.</p>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="p-6 bg-slate-50 rounded-3xl">
+                        <i class="fa-solid fa-shield-heart text-3xl text-naranja mb-4"></i>
+                        <p class="font-black text-slate-800">100% Seguro</p>
+                    </div>
+                    <div class="p-6 bg-slate-50 rounded-3xl">
+                        <i class="fa-solid fa-clock text-3xl text-naranja mb-4"></i>
+                        <p class="font-black text-slate-800">5 Minutos</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div class="w-full lg:w-[400px]">
-            <div class="bg-white p-8 rounded-[2.5rem] fintech-card border border-slate-50">
-                
-                <div class="space-y-2">
-                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100 focus-within:border-blue-400 transition-all">
-                        <div class="flex justify-between items-center mb-1">
-                            <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Tú envías</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="number" id="cop" value="100000" class="bg-transparent text-2xl font-extrabold text-slate-800 outline-none w-full">
-                            <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-xl shadow-sm border border-slate-100">
-                                <img src="https://flagcdn.com/w40/co.png" class="w-5 h-3.5 object-cover rounded-sm" alt="Colombia">
-                                <span class="text-sm font-bold">COP</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex justify-center -my-4 relative z-10">
-                        <div class="bg-white w-10 h-10 rounded-full flex items-center justify-center border-2 border-slate-50 shadow-md">
-                            <i class="fa-solid fa-arrow-down-up-across-line text-blue-500 text-xs"></i>
-                        </div>
-                    </div>
-
-                    <div class="bg-slate-50 p-5 rounded-2xl border border-slate-100">
-                        <div class="flex justify-between items-center mb-1">
-                            <label class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Ellos reciben</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="number" id="bs" readonly class="bg-transparent text-2xl font-extrabold text-slate-800 outline-none w-full">
-                            <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-xl shadow-sm border border-slate-100">
-                                <img src="https://flagcdn.com/w40/ve.png" class="w-5 h-3.5 object-cover rounded-sm" alt="Venezuela">
-                                <span class="text-sm font-bold">VES</span>
-                            </div>
-                        </div>
-                    </div>
+        <h3 class="text-center font-black text-3xl mb-16 tracking-tight">Voces de nuestra comunidad</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 rounded-[3rem] bg-white border border-slate-100 shadow-xl">
+                <div class="flex gap-1 text-naranja text-[10px] mb-4">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                 </div>
-
-                <div class="mt-6 space-y-3 px-2">
-                    <div class="flex justify-between text-sm">
-                        <span class="text-slate-400 font-medium">Tasa de hoy</span>
-                        <span class="text-slate-700 font-extrabold">1 COP = <span id="tasa-val">3.82</span> VES</span>
-                    </div>
-                    <div class="flex justify-between text-sm">
-                        <span class="text-slate-400 font-medium">Comisión envío</span>
-                        <span class="text-green-600 font-extrabold">¡GRATIS!</span>
-                    </div>
-                    <div class="h-[1px] bg-slate-100 w-full my-4"></div>
-                </div>
-
-                <button onclick="window.location.href='registro.html'" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-extrabold py-5 rounded-2xl mt-4 shadow-xl shadow-blue-200 transition-all hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-3">
-                    COMENZAR ENVÍO
-                    <i class="fa-solid fa-arrow-right text-sm"></i>
-                </button>
+                <p class="text-slate-600 italic font-medium">"Desde que uso Cambioseh no me preocupo por las tasas. Siempre son los más competitivos."</p>
+                <p class="mt-6 font-black text-slate-900">— Ricardo Mejías</p>
             </div>
-        </div>
-    </main>
+            </div>
+    </section>
 
-    <footer class="mt-20 py-10 border-t border-slate-100 text-center">
-        <p class="text-slate-400 text-sm">© 2026 Cambioseh. Todos los derechos reservados.</p>
-    </footer>
+    <a href="https://wa.me/573203043142" class="fixed bottom-10 right-10 bg-green-500 text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl shadow-2xl z-[100] hover:scale-110 transition-all">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script>
-        const tasa = 3.82;
-        const inputCop = document.getElementById('cop');
-        const inputBs = document.getElementById('bs');
-
-        function calcular() {
-            inputBs.value = (inputCop.value * tasa).toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2});
-        }
-
-        inputCop.addEventListener('input', calcular);
-        window.onload = calcular;
+        const T_COP = 3.82, T_BCV = 45.48;
+        const c = document.getElementById('cop'), b = document.getElementById('bs'), u = document.getElementById('usd');
+        c.addEventListener('input', () => { b.value = (c.value * T_COP).toFixed(2); u.value = (b.value / T_BCV).toFixed(2); });
+        b.addEventListener('input', () => { c.value = (b.value / T_COP).toFixed(2); u.value = (b.value / T_BCV).toFixed(2); });
+        u.addEventListener('input', () => { b.value = (u.value * T_BCV).toFixed(2); c.value = (b.value / T_COP).toFixed(2); });
     </script>
 </body>
 </html>
