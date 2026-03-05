@@ -7,93 +7,78 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #f0f2f5; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .bg-navy { background-color: #0b1221; }
+        body { background-color: #ffffff; font-family: sans-serif; margin: 0; padding: 0; }
+        .bg-dark { background-color: #1a1a1a; }
         .text-naranja { color: #FF6B00; }
-        .btn-naranja { background-color: #FF6B00; color: white; }
-        .sombra-pro { box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
     </style>
 </head>
-<body class="pb-10">
+<body>
 
-    <div class="bg-white py-6 border-b border-slate-200">
-        <div class="max-w-md mx-auto px-4 flex justify-center">
-            <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh" class="h-20 w-auto object-contain">
+    <div class="w-full py-6 flex justify-center border-b border-gray-100">
+        <img src="https://i.ibb.co/FLhP6VbN/logo.png" alt="Cambioseh" style="height: 80px; width: auto; max-width: 90%;">
+    </div>
+
+    <div class="bg-gray-50 py-4 flex justify-around border-b border-gray-200">
+        <div class="text-center">
+            <p class="text-[10px] font-bold text-gray-400 uppercase">Tasa COP</p>
+            <p class="text-xl font-black text-black">3.82</p>
+        </div>
+        <div class="text-center border-l border-gray-200 pl-10">
+            <p class="text-[10px] font-bold text-gray-400 uppercase">Tasa BCV</p>
+            <p class="text-xl font-black text-black">45.48</p>
         </div>
     </div>
 
-    <div class="max-w-md mx-auto px-4 mt-6 flex gap-2">
-        <a href="login.html" class="flex-1 bg-white text-slate-700 py-3 rounded-xl font-bold text-center border border-slate-200 shadow-sm text-sm">ENTRAR</a>
-        <a href="registro.html" class="flex-1 bg-navy text-white py-3 rounded-xl font-bold text-center shadow-md text-sm uppercase tracking-wider">REGISTRO</a>
-    </div>
-
-    <main class="max-w-md mx-auto px-4 mt-8">
-        <div class="bg-white rounded-[2rem] p-8 sombra-pro">
+    <div class="max-w-md mx-auto p-6">
+        <div class="bg-white rounded-3xl border-2 border-gray-100 p-6 shadow-xl">
+            <h2 class="text-center font-bold text-gray-800 mb-6 uppercase tracking-widest text-sm">Calculadora de Cambio</h2>
             
-            <h2 class="text-center font-black text-slate-800 uppercase tracking-tighter text-xl mb-6 italic">Calculadora de Cambio</h2>
-
-            <div class="flex justify-between mb-8 px-2">
-                <div class="text-center">
-                    <p class="text-[9px] font-bold text-slate-400 uppercase">Tasa COP</p>
-                    <p class="text-xl font-black text-navy">3.82</p>
-                </div>
-                <div class="w-[1px] bg-slate-100"></div>
-                <div class="text-center">
-                    <p class="text-[9px] font-bold text-slate-400 uppercase">Dólar BCV</p>
-                    <p class="text-xl font-black text-navy">45.48</p>
-                </div>
-            </div>
-
             <div class="space-y-6">
                 <div>
-                    <div class="flex items-center gap-2 mb-2 ml-2">
-                        <img src="https://flagcdn.com/w40/co.png" class="w-5 h-3 shadow-sm rounded-sm">
-                        <label class="text-[10px] font-black text-slate-400 uppercase">Envías Pesos</label>
-                    </div>
-                    <div class="bg-slate-50 p-5 rounded-2xl border-2 border-slate-100 focus-within:border-orange-500 transition-all">
-                        <input type="number" id="cop" value="100000" class="bg-transparent text-3xl font-black w-full outline-none text-slate-800">
+                    <label class="text-[10px] font-bold text-gray-400 mb-2 block uppercase">Envías Pesos Colombianos</label>
+                    <div class="flex items-center bg-gray-100 p-4 rounded-xl">
+                        <img src="https://flagcdn.com/w40/co.png" class="w-6 mr-3">
+                        <input type="number" id="cop" value="100000" class="bg-transparent text-2xl font-bold w-full outline-none">
+                        <span class="font-bold text-gray-400">COP</span>
                     </div>
                 </div>
 
                 <div>
-                    <div class="flex items-center gap-2 mb-2 ml-2">
-                        <img src="https://flagcdn.com/w40/ve.png" class="w-5 h-3 shadow-sm rounded-sm">
-                        <label class="text-[10px] font-black text-slate-400 uppercase text-naranja">Reciben Bolívares</label>
-                    </div>
-                    <div class="bg-orange-50 p-5 rounded-2xl border-2 border-orange-100 focus-within:border-orange-500 transition-all">
-                        <input type="number" id="bs" class="bg-transparent text-3xl font-black w-full outline-none text-slate-800">
+                    <label class="text-[10px] font-bold text-gray-400 mb-2 block uppercase">Reciben Bolívares</label>
+                    <div class="flex items-center bg-orange-50 p-4 rounded-xl border border-orange-100">
+                        <img src="https://flagcdn.com/w40/ve.png" class="w-6 mr-3">
+                        <input type="number" id="bs" class="bg-transparent text-2xl font-bold w-full outline-none">
+                        <span class="font-bold text-gray-400">VES</span>
                     </div>
                 </div>
 
-                <div class="pt-4 border-t border-slate-50 text-center">
-                    <p class="text-[10px] font-bold text-slate-400 uppercase mb-1">Equivalente Dólar BCV</p>
-                    <p class="text-3xl font-black text-navy">$ <span id="usd">0.00</span></p>
+                <div class="bg-black text-white p-5 rounded-2xl text-center">
+                    <p class="text-[10px] font-bold text-orange-400 uppercase mb-1">Referencia Dólares BCV</p>
+                    <p class="text-3xl font-black">$ <span id="usd">0.00</span></p>
                 </div>
             </div>
 
-            <button onclick="window.location.href='registro.html'" class="w-full btn-naranja py-6 rounded-2xl mt-8 font-black text-lg shadow-lg shadow-orange-200 uppercase tracking-widest active:scale-95 transition-all">
-                ENVIAR DINERO AHORA
+            <button onclick="window.location.href='registro.html'" class="w-full bg-[#FF6B00] text-white font-black py-5 rounded-2xl mt-8 text-lg uppercase shadow-lg shadow-orange-200">
+                REGISTRARME Y ENVIAR
             </button>
         </div>
+    </div>
 
-        <div class="mt-10 bg-navy text-white p-8 rounded-[2rem] text-center">
-            <h3 class="font-bold text-lg mb-2 text-naranja">¿Por qué Cambioseh?</h3>
-            <p class="text-xs text-slate-400 leading-relaxed italic">"Somos la casa de cambio más segura para tu familia. Transparencia total, sin comisiones ocultas y abono en tiempo récord."</p>
-        </div>
-    </main>
-
-    <a href="https://wa.me/573203043142" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl z-50">
+    <a href="https://wa.me/573203043142" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center text-4xl shadow-2xl z-50">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
     <script>
-        const T_COP = 3.82, T_BCV = 45.48;
-        const c = document.getElementById('cop'), b = document.getElementById('bs'), u = document.getElementById('usd');
-        
-        function update(val, type) {
+        const T_COP = 3.82;
+        const T_BCV = 45.48;
+        const c = document.getElementById('cop');
+        const b = document.getElementById('bs');
+        const u = document.getElementById('usd');
+
+        function calcular(val, tipo) {
             let n = parseFloat(val) || 0;
-            if(type === 'c') {
+            if(tipo === 'c') {
                 let resBs = n * T_COP;
                 b.value = resBs.toFixed(0);
                 u.innerText = (resBs / T_BCV).toFixed(2);
@@ -102,9 +87,12 @@
                 u.innerText = (n / T_BCV).toFixed(2);
             }
         }
-        c.addEventListener('input', (e) => update(e.target.value, 'c'));
-        b.addEventListener('input', (e) => update(e.target.value, 'b'));
-        update(100000, 'c');
+
+        c.addEventListener('input', (e) => calcular(e.target.value, 'c'));
+        b.addEventListener('input', (e) => calcular(e.target.value, 'b'));
+        
+        // Iniciar con 100.000 COP
+        calcular(100000, 'c');
     </script>
 </body>
 </html>
